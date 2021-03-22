@@ -1,2 +1,38 @@
-font-family: 'Montserrat', sans-serif;
-font-family: 'Open Sans', sans-serif;
+// Variables
+$footer-bg-color: #505050;
+
+// Mixins
+@mixin button($width: 100px, $pd-y: 5px, $pd-x: 5px) {
+  width: $width;
+  outline: none;
+  border: none;
+  padding: $pd-y $pd-x;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #303030;
+  border-radius: 25px;
+}
+@mixin flexbox(
+  $direction: row,
+  $jtf-content: center,
+  $algn-items: center,
+  $wrap: wrap
+) {
+  display: flex;
+  justify-content: $jtf-content;
+  align-items: $algn-items;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+}
+@mixin title($size, $weight: 700, $l-height: 0px) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $l-height;
+}
+@mixin desciption-txt($size, $weight: 300, $l-height: 0px) {
+  font-family: "Open Sans", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $l-height;
+}
