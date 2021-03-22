@@ -40,5 +40,5 @@ $footer-bg-color: #505050;
   line-height: $l-height;
 }
 @mixin border($color: magenta) {
-  border: 1px solid $color;
+  border: 0px solid $color;
 }

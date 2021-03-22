@@ -1,0 +1,124 @@
+/* Footer styles */
+.footer-container {
+  width: 100%;
+  padding: 50px 0;
+  background-color: $footer-bg-color;
+  color: #fff;
+  @include border(orange);
+
+  .footer-section {
+    margin: auto;
+    width: 80%;
+    max-width: 400px;
+    @include flexbox;
+    @include border(magenta);
+
+    // Footer logo
+    .footer-logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 50px;
+      &#{__icon} {
+        width: 30px;
+        height: 30px;
+      }
+      &#{__name} {
+        @include title;
+        margin-right: auto;
+      }
+    }
+
+    // Footer navs section
+    .footer-nav-section {
+      width: 100%;
+      @include border(cyan);
+      @include flexbox;
+
+      .company-info-nav-container {
+        width: 100%;
+        @include border(greenyellow);
+        text-align: center;
+        margin-bottom: 40px;
+
+        .company-info-nav {
+          list-style-type: none;
+
+          &#{__item} {
+            margin-bottom: 10px;
+          }
+          &#{__link} {
+            color: #fff;
+            text-decoration: none;
+            @include desciption-txt;
+          }
+        }
+        .company-info-nav__title {
+          @include title($size: 1.6rem);
+          margin-bottom: 10px;
+        }
+      }
+
+      .blog-post-nav-container {
+        width: 100%;
+        @include border(greenyellow);
+        text-align: center;
+        margin-bottom: 40px;
+
+        .blog-post-nav {
+          list-style-type: none;
+
+          &#{__item} {
+            margin-bottom: 10px;
+          }
+          &#{__link} {
+            color: #fff;
+            text-decoration: none;
+            @include desciption-txt;
+          }
+        }
+        .blog-post-nav__title {
+          @include title($size: 1.6rem);
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    // Subscribe section
+    .subscribe-section {
+      width: 100%;
+      @include border(greenyellow);
+      text-align: center;
+
+      &#{__title} {
+        @include title($size: 1.7rem);
+        margin-bottom: 10px;
+      }
+      &#{__description} {
+        @include desciption-txt($weight: 400);
+        margin-bottom: 30px;
+      }
+      .input-email {
+        width: 100%;
+        max-width: 350px;
+        @include flexbox($wrap: nowrap, $jtf-content: space-between);
+
+        &#{__input} {
+          background-color: lighten($footer-bg-color, 20%);
+          border: none;
+          outline: none;
+          padding: 15px 0 15px 15px;
+          border-radius: 8px 0px 0px 8px;
+          width: 70%;
+
+          &::placeholder {
+            color: #fff;
+          }
+        }
+        &#{__btn} {
+          @include button($width: 30%);
+          border-radius: 0px 8px 8px 0px;
+        }
+      }
+    }
+  }
+}
