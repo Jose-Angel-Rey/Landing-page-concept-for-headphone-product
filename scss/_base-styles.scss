@@ -9,6 +9,7 @@
     scroll-behavior: smooth;
 }
 .main-container{
+    @include border;
     width: 100%;
     padding: 5% 0 0;
     background-color: #fff;

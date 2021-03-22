@@ -1,8 +1,11 @@
 // Variables
+
+$primary-font: "Montserrat", sans-serif;
+$second-font: "Open Sans", sans-serif;
 $footer-bg-color: #505050;
 
 // Mixins
-@mixin button($width: 100px, $pd-y: 5px, $pd-x: 5px) {
+@mixin button($width: 150px, $pd-y: 15px, $pd-x: 5px) {
   width: $width;
   outline: none;
   border: none;
@@ -24,15 +27,18 @@ $footer-bg-color: #505050;
   flex-wrap: $wrap;
   flex-direction: $direction;
 }
-@mixin title($size, $weight: 700, $l-height: 0px) {
+@mixin title($size:2rem, $weight: 700, $l-height: auto) {
   font-family: "Montserrat", sans-serif;
   font-weight: $weight;
   font-size: $size;
   line-height: $l-height;
 }
-@mixin desciption-txt($size, $weight: 300, $l-height: 0px) {
+@mixin desciption-txt($size:1.5rem, $weight: 300, $l-height: auto) {
   font-family: "Open Sans", sans-serif;
   font-weight: $weight;
   font-size: $size;
   line-height: $l-height;
+}
+@mixin border($color: magenta) {
+  border: 1px solid $color;
 }
