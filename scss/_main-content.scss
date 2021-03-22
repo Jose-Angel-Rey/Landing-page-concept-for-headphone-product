@@ -5,28 +5,37 @@
   @include flexbox;
 
   // About section
-  .about-section {
+  .about-section-container {
     width: 100%;
     min-height: 100vh;
     @include flexbox;
     text-align: center;
     @include border(orange);
-    background: rgba(0, 0, 0, 0.63);
-    // background-size: cover;
+    background-image: url(../assets/hero-image.webp);
+    background-position: center;
+    background-size: cover;
 
-    &#{__title} {
-      width: 70%;
-      @include title($size: 3rem);
-      color: #fff;
-    }
-    &#{__sub-title} {
-      @include title;
-      width: 60%;
-      color: #fff;
-    }
-    &#{__description} {
-      @include desciption-txt($weight: 400);
-      color: #fff;
+    .about-section {
+      width: 80%;
+      @include border;
+      @include flexbox;
+      &#{__title} {
+        order: 1;
+        @include title($size: 3rem);
+        color: #fff;
+        margin-bottom: 30px;
+      }
+      &#{__sub-title} {
+        order: 0;
+        @include title;
+        color: #fff;
+        margin-bottom: 25px;
+      }
+      &#{__description} {
+        @include desciption-txt($weight: 400);
+        color: #fff;
+        order: 2;
+      }
     }
   }
 
