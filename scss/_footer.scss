@@ -88,6 +88,7 @@
       width: 100%;
       @include border(greenyellow);
       text-align: center;
+      @include flexbox;
 
       &#{__title} {
         @include title($size: 1.7rem);
