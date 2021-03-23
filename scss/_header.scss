@@ -7,8 +7,7 @@
 
   // Navbar
   .header-navbar {
-    width: 80%;
-    max-width: 400px;
+    width: 75%;
     @include border(blue);
     margin-bottom: 75px;
     @include flexbox($jtf-content: space-between, $wrap: nowrap);
@@ -43,8 +42,7 @@
 
   // Content
   .header-content-wrapper{
-    width: 80%;
-    max-width: 400px;
+    width: 75%;
 
     @include border(rgb(21, 255, 0));
     @include flexbox;

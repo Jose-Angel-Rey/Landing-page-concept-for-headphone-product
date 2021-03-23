@@ -11,7 +11,10 @@
     @include flexbox;
     text-align: center;
     @include border(orange);
-    background-image: url(../assets/hero-image.webp);
+    background: linear-gradient(
+        rgba(49, 49, 49, 0.45),
+        rgba(5, 5, 5, 0.45)
+      ), url(../assets/hero-image.webp);
     background-position: center;
     background-size: cover;
 
@@ -20,18 +23,22 @@
       @include border;
       @include flexbox;
       &#{__title} {
+        width: 100%;
         order: 1;
         @include title($size: 3rem);
         color: #fff;
         margin-bottom: 30px;
       }
       &#{__sub-title} {
+        width: 100%;
         order: 0;
         @include title;
         color: #fff;
         margin-bottom: 25px;
       }
       &#{__description} {
+        width: 80%;
+        max-width: 450px;
         @include desciption-txt($weight: 400);
         color: #fff;
         order: 2;
