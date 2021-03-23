@@ -1,4 +1,4 @@
-/* 768 px */
+// *********  768px *****************
 @media screen and (min-width: 768px) {
   // Header
   .header-container {
@@ -7,9 +7,9 @@
         width: 50%;
         text-align: left;
 
-        &#{__description}{
-            width: 80%;
-            max-width: 400px;
+        &#{__description} {
+          width: 80%;
+          max-width: 400px;
         }
 
         &#{__image} {
@@ -22,11 +22,6 @@
 
   // Main content
   .main-content-container {
-    // .about-section-container{
-    //     .about-section{
-    //         &#{__sub-tile}
-    //     }
-    // }
     .grid-gallery {
       grid-template-rows: repeat(2, 250px);
     }
@@ -56,13 +51,104 @@
         }
       }
 
-      .subscribe-section{
-          &#{__title}{
-              font-size: 2rem;
-          }
-          &#{__description}{
-              width: 400px;
-          }
+      .subscribe-section {
+        &#{__title} {
+          font-size: 2rem;
+        }
+        &#{__description} {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+// *********  1024px *****************
+@media screen and (min-width: 1024px) {
+  //Header
+  .header-container {
+    .header-navbar {
+      width: 80%;
+    }
+    .header-content-wrapper {
+      width: 80%;
+    }
+  }
+  // Main content
+  .main-content-container {
+    .grid-gallery {
+      grid-template-rows: repeat(2, 300px);
+    }
+  }
+
+  // Footer
+  .footer-container {
+    .footer-section {
+      max-width: 900px;
+      justify-content: space-between;
+
+      .footer-logo {
+        width: 15%;
+        &#{__icon} {
+          width: 50px;
+          height: 50px;
+        }
+        &#{__name} {
+          font-size: 3.5rem;
+        }
+      }
+
+      .footer-nav-section {
+        width: 50%;
+        justify-content: space-evenly;
+        .company-info-nav-container {
+          text-align: left;
+          width: 35%;
+          margin-bottom: 0;
+        }
+        .blog-post-nav-container {
+          text-align: left;
+          width: 35%;
+          margin-bottom: 0;
+        }
+      }
+
+      .subscribe-section {
+        width: 30%;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+// *********  1360px *****************
+@media screen and (min-width: 1360px) {
+  .header-container {
+    .header-navbar {
+      .header-navbar__logo {
+        &#{-name} {
+          font-size: 3rem;
+        }
+        &#{-icon} {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .header-nav {
+        max-width: 135px;
+        &#{__link} {
+          font-size: 1.7rem;
+        }
+      }
+    }
+    .header-content-wrapper {
+      .header-content {
+        &#{__title} {
+          max-width: 525px;
+          font-size: 5rem;
+        }
+        &#{__description} {
+          font-size: 1.8rem;
+        }
       }
     }
   }
