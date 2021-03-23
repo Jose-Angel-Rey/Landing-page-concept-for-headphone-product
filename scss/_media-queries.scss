@@ -152,4 +152,17 @@
       }
     }
   }
+
+  .main-content-container {
+    .about-section-container {
+      .about-section {
+        &#{__title} {
+          font-size: 5rem;
+        }
+        &#{__sub-title} {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
 }
