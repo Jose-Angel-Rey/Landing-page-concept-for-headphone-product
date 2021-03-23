@@ -1,14 +1,12 @@
 /* Header styles*/
 .header-container {
   width: 100%;
-  @include border(green);
   @include flexbox;
   margin-bottom: 100px;
 
   // Navbar
   .header-navbar {
     width: 75%;
-    @include border(blue);
     margin-bottom: 75px;
     @include flexbox($jtf-content: space-between, $wrap: nowrap);
 
@@ -23,7 +21,6 @@
       }
     }
     .header-nav {
-      @include border;
       width: 40%;
       max-width: 105px;
       @include flexbox($jtf-content: space-between);
@@ -36,35 +33,51 @@
         font-weight: 400;
         text-decoration: none;
         text-transform: uppercase;
+        transition: all 0.5s;
+        display: block;
+
+        &:hover {
+          text-decoration: underline;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
       }
     }
   }
 
   // Content
-  .header-content-wrapper{
+  .header-content-wrapper {
     width: 75%;
-
-    @include border(rgb(21, 255, 0));
     @include flexbox;
 
-    .header-content{
-        width: 100%;
-        text-align: center;
+    .header-content {
+      width: 100%;
+      text-align: center;
 
-        &#{__title}{
-            @include title($size:3.5rem);
-            margin-bottom: 30px
+      &#{__title} {
+        @include title($size: 3.5rem);
+        margin-bottom: 30px;
+      }
+      &#{__description} {
+        @include desciption-txt($weight: 400);
+      }
+      &#{__btn} {
+        @include button;
+        margin: 40px auto 60px;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: $footer-bg-color;
         }
-        &#{__description}{
-            @include desciption-txt($weight:400);
+        &:active {
+          transform: scale(0.95);
         }
-        &#{__btn}{
-            @include button;
-            margin: 40px auto 60px;
-        }
+      }
     }
-    .header-content__image{
-        width: 100%;
+    .header-content__image {
+      width: 100%;
     }
   }
 }

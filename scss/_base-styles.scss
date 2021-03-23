@@ -4,14 +4,13 @@
   margin: 0px;
   padding: 0px;
 }
-:root{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
-.main-container{
-    @include border;
-    width: 100%;
-    padding: 5% 0 0;
-    background-color: #fff;
-    overflow-x: hidden;
+.main-container {
+  width: 100%;
+  padding: 5% 0 0;
+  background-color: #fff;
+  overflow-x: hidden;
 }

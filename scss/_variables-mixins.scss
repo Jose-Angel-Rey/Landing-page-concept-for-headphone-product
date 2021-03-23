@@ -38,5 +38,5 @@ $footer-bg-color: #505050;
   font-size: $size;
 }
 @mixin border($color: magenta) {
-  border: 0px solid $color;
+  border: 1px solid $color;
 }

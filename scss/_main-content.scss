@@ -1,7 +1,6 @@
 /* Main content styles*/
 .main-content-container {
   width: 100%;
-  @include border(blue);
   @include flexbox;
 
   // About section
@@ -10,18 +9,13 @@
     min-height: 100vh;
     @include flexbox;
     text-align: center;
-    @include border(orange);
-    background: linear-gradient(
-        rgba(49, 49, 49, 0.45),
-        rgba(5, 5, 5, 0.45)
-      ), url(../assets/hero-image.webp);
+    background: linear-gradient(rgba(49, 49, 49, 0.45), rgba(5, 5, 5, 0.45)),
+      url(../assets/hero-image.webp);
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
 
     .about-section {
       width: 80%;
-      @include border;
       @include flexbox;
       &#{__title} {
         width: 100%;
