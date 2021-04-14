@@ -1,5 +1,7 @@
 # Landing page concept for headphone product
 
+## *** This Landing Page is only for educational purposes ***
+
 ## 🚀🚀 URL: https://jose-angel-rey-headphones.vercel.app/
 
 ## 📧 [Contact me](dev.joseangel.rey@gmail.com) 
